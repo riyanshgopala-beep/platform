@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title or "ShivArt" }}</title>
+    <link rel="stylesheet" href="/static/shell.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<canvas id="galaxy"></canvas>
+
+<header class="nav-glass">
+    <div class="brand">🕉 ShivArt</div>
+    <nav>
+        <a href="/">Home</a>
+    </nav>
+</header>
+
+<main class="shell">
+
+    {% if shops %}
+
+        {% for shop in shops %}
+
+        <div style="
+            max-width:380px;
+            margin:80px auto;
+            padding:28px;
+            border-radius:24px;
+            background:rgba(255,255,255,0.04);
+            backdrop-filter:blur(30px);
+            box-shadow:0 0 80px rgba(124,124,255,0.15);
+            text-align:center;
+        ">
+
+            <img src="/preview/{{ shop.slug }}"
+                 style="width:100%; border-radius:18px; margin-bottom:20px;">
+
+            <div style="margin-bottom:15px;">
+                ₹{{ shop.price }}
+            </div>
+
+            <a href="/art/{{ shop.slug }}">
+                <button style="
+                    padding:12px 24px;
+                    border:none;
+                    border-radius:14px;
+                    background:#7c7cff;
+                    color:white;
+                    cursor:pointer;
+                ">
+                    View Art
+                </button>
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+        {% block content %}{% endblock %}
+    {% endif %}
+
+</main>
+
+<footer class="footer">
+    <span>ShivArt • Divine 4K Art</span>
+</footer>
+
+<script src="/static/galaxy.js"></script>
+
+</body>
+</html>

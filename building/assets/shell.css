@@ -1,0 +1,106 @@
+#galaxy {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    color: #e5e7eb;
+    background: black;
+}
+
+/* 🌌 SPACE BACKGROUND (STARS ONLY) */
+.space {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.stars, .stars2, .stars3 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 
+      1000px 200px white,
+      400px 900px white,
+      800px 1200px white,
+      1200px 400px white,
+      1600px 800px white;
+    animation: moveStars 100s linear infinite;
+}
+
+.stars2 {
+    box-shadow:
+      200px 300px #7c7cff,
+      600px 700px #7c7cff,
+      1400px 500px #7c7cff;
+    animation-duration: 150s;
+}
+
+.stars3 {
+    box-shadow:
+      300px 100px #00c6ff,
+      900px 1400px #00c6ff,
+      1300px 900px #00c6ff;
+    animation-duration: 200s;
+}
+
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
+}
+
+/* 🚀 FLOATING NAV */
+.nav-glass {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 80px);
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 22px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-glass nav a {
+    margin-left: 20px;
+    color: #c7d2fe;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.nav-glass nav a:hover {
+    opacity: 1;
+}
+
+/* 🧠 EMPTY BUILDING SHELL (INTENTIONALLY BLANK) */
+.shell {
+    padding-top: 180px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ⚙️ FOOTER */
+.footer {
+    margin-top: 140px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.5;
+    padding-bottom: 40px;
+}

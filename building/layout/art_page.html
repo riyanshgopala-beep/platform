@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="art-wrapper">
+
+    <div class="art-card">
+
+        <!-- PREVIEW IMAGE -->
+        <img src="/preview/{{ shop.slug }}" class="art-image">
+
+        <!-- PDF LABEL -->
+        <div class="pdf-box">
+            4K PRINTABLE PDF
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="btn-row">
+            <button id="buyBtn" class="btn-buy">BUY</button>
+            <button id="downloadBtn" class="btn-download" disabled>DOWNLOAD</button>
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+.art-wrapper{
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.art-card{
+    width:360px;
+    padding:28px;
+    border-radius:24px;
+    background:rgba(255,255,255,0.04);
+    backdrop-filter:blur(30px);
+    box-shadow:0 0 80px rgba(124,124,255,0.15);
+    text-align:center;
+    transition:0.4s ease;
+}
+
+.art-card:hover{
+    box-shadow:0 0 120px rgba(124,124,255,0.35);
+}
+
+.art-image{
+    width:100%;
+    border-radius:18px;
+    margin-bottom:22px;
+    box-shadow:0 0 50px rgba(124,124,255,0.4);
+}
+
+.pdf-box{
+    padding:12px;
+    margin-bottom:22px;
+    border-radius:14px;
+    background:rgba(0,0,0,0.45);
+    border:1px solid rgba(255,255,255,0.1);
+    font-size:13px;
+    letter-spacing:1.5px;
+}
+
+.btn-row{
+    display:flex;
+    gap:14px;
+}
+
+.btn-buy, .btn-download{
+    flex:1;
+    padding:12px 0;
+    border:none;
+    border-radius:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-buy{
+    background:#7c7cff;
+    color:white;
+}
+
+.btn-buy:hover{
+    transform:scale(1.05);
+}
+
+.btn-download{
+    background:#00c6ff;
+    color:white;
+}
+
+.btn-download:disabled{
+    opacity:0.4;
+    cursor:not-allowed;
+}
+</style>
+
+<script>
+document.getElementById("buyBtn").onclick = function() {
+    alert("Payment Successful (Demo Mode)");
+    document.getElementById("downloadBtn").disabled = false;
+};
+
+document.getElementById("downloadBtn").onclick = function() {
+    window.location.href = "/download/{{ shop.slug }}";
+};
+</script>
+
+{% endblock %}
