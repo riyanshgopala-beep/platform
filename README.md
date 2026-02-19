@@ -8,11 +8,11 @@ This platform offers high-quality printable artwork including devotional art, Lo
 
 ## ✨ What You Can Do
 
-✔ Use as phone wallpaper  
-✔ Print and frame for home décor  
-✔ Perfect for gifting  
-✔ Enhance spiritual and creative spaces  
-✔ Order custom pencil artwork  
+- Use as phone wallpaper  
+- Print and frame for home décor  
+- Perfect for gifting  
+- Enhance spiritual and creative spaces  
+- Order custom pencil artwork  
 
 ---
 
@@ -26,10 +26,10 @@ We aim to grow beyond a single category and build a platform where art lovers ca
 
 ## 📦 Product Format
 
-• High-resolution printable PDF  
-• Ready-to-print quality  
-• Instant digital download  
-• Compatible with standard print sizes  
+- High-resolution printable PDF  
+- Ready-to-print quality  
+- Instant digital download  
+- Compatible with standard print sizes  
 
 ---
 
@@ -49,5 +49,5 @@ Premium and custom artworks may vary depending on design and detail.
 
 ---
 
-🙏 Har Har Mahadev  
-Creating art that connects the soul.
+🙏 **Har Har Mahadev**  
+*Creating art that connects the soul.*
